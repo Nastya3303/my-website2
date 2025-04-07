@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Репетитор английского языка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Плавный скроллинг */
+        }
+
+        header {
+            background-color: #f1c6b2;
+            padding: 20px 0;
+            text-align: center;
+            background: linear-gradient(to right, rgba(241, 198, 178, 0.8), rgba(255, 255, 255, 0.8)); /* Градиент */
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #4e4e4e;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #f1c6b2;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #e1a592;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(to right, rgba(241, 198, 178, 0.8), rgba(255, 255, 255, 0.8)); /* Градиент */
+        }
+
+        section h2 {
+            font-size: 28px;
+            color: #4e4e4e;
+            margin-bottom: 20px;
+        }
+
+        .services, .contacts, .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service, .contact, .about-content {
+            flex: 1;
+            min-width: 300px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease; /* Плавный переход */
+        }
+
+        .service:hover {
+            transform: scale(1.05); /* Анимация при наведении */
+            background-color: #fff8f3;
+        }
+
+        footer {
+            background-color: #f1c6b2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #e1a592;
+        }
+
+        /* Модальные окна */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .modal-content button {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #ff4500;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #e1a592;
+        }
+
+        /* Кнопка наверх */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Репетитор английского языка</h1>
+</header>
+
+<nav>
+    <a href="#services">Услуги</a>
+    <a href="#exams">Подготовка к экзаменам</a>
+    <a href="#school-help">Помощь по школьной программе</a>
+    <a href="#about">О себе</a>
+    <a href="#contacts">Контакты</a>
+    <a href="#learning-method">Форма обучения</a>
+</nav>
+
+<section id="services">
+    <h2>Услуги</h2>
+    <div class="services">
+        <div class="service">
+            <div class="service-icon">&#128211;</div> <!-- Иконка для услуги -->
+            <h3>Занятия с детьми и взрослыми</h3>
+            <p>Индивидуальные занятия для всех возрастов. Подходящие методики для начинающих и продвинутых студентов.</p>
+        </div>
+        <div class="service">
+            <div class="service-icon">&#128218;</div> <!-- Иконка для услуги -->
+            <h3>Подготовка к экзаменам</h3>
+            <p>Подготовка к HMT, а также к вступительным экзаменам в университеты по всем странам.</p>
+        </div>
+        <div class="service">
+            <div class="service-icon">&#128172;</div> <!-- Иконка для услуги -->
+            <h3>Помощь по школьной программе</h3>
+            <p>Обучение по школьной программе для школьников разного возраста и уровня подготовки.</p>
+        </div>
+    </div>
+</section>
+
+<section id="exams">
+    <h2>Подготовка к экзаменам</h2>
+    <p>Подготовка к HMT требует не только знания языка, но и умения правильно подготовиться. Важно работать с опытным репетитором, чтобы пройти через все этапы подготовки: от выбора экзамена до освоения специфических техник сдачи.</p>
+</section>
+
+<section id="school-help">
+    <h2>Помощь по школьной программе</h2>
+    <p>Школьная программа по английскому языку может быть сложной и требовать индивидуального подхода, особенно если ученик имеет пробелы в знаниях. Я помогу вашему ребенку разобраться с трудными темами, подготовиться к контрольным работам и экзаменам, а также развить уверенность в использовании английского языка.</p>
+</section>
+
+<section id="about">
+    <h2>О себе</h2>
+    <div class="about">
+        <div class="about-content">
+            <h3>Я – Анастасия</h3>
+            <p>Опытный репетитор английского языка с многолетним опытом преподавания. Моя цель – помочь вам или вашему ребенку легко и уверенно изучать английский язык.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contacts">
+    <h2>Контакты</h2>
+    <div class="contacts">
+        <div class="contact">
+            <h3>Телефон</h3>
+            <p>0681168846-Анастасия</p>
+        </div>
+        <div class="contact">
+            <h3>Местоположение</h3>
+            <p>г. Киев, ул. Булгакова</p>
+        </div>
+    </div>
+</section>
+
+<section id="social">
+    <h2>Социальные сети</h2>
+    <div class="social">
+        <p>Вы можете связаться со мной через Telegram:</p>
+        <p><a href="https://t.me/annastasiaa3303" target="_blank">@annastasiaa3303</a></p>
+    </div>
+</section>
+
+<section id="learning-method">
+    <h2>Форма обучения</h2>
+    <h3>Онлайн</h3>
+    <p>Занятия по Meet или Zoom. Это удобный способ обучения для тех, кто не может посещать занятия лично.</p>
+
+    <h3>Оффлайн</h3>
+    <p>Занятия в Киеве. Оффлайн-обучение позволяет более тесно взаимодействовать с преподавателем.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Анастасия - Репетитор английского языка</p>
+    <a href="#privacy-policy">Политика конфиденциальности</a> | <a href="#terms">Условия использования</a>
+</footer>
+
+<!-- Модальное окно для записи -->
+<div class="modal" id="modalForm">
+    <div class="modal-content">
+        <h3>Записаться на занятие</h3>
+        <form>
+            <label for="name">Ваше имя:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="contact">Контактный номер:</label><br>
+            <input type="text" id="contact" name="contact" required><br><br>
+            <button type="submit">Отправить заявку</button>
+        </form>
+        <button onclick="closeModal()">Закрыть</button>
+    </div>
+</div>
+
+<script>
+    // Открыть модальное окно
+    function openModal() {
+        document.getElementById('modalForm').style.display = 'flex';
+    }
+
+    // Закрыть модальное окно
+    function closeModal() {
+        document.getElementById('modalForm').style.display = 'none';
+    }
+
+    // Показать кнопку "Наверх" при прокрутке
+    window.onscroll = function () {
+        let scrollButton = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            scrollButton.style.display = "block";
+        } else {
+            scrollButton.style.display = "none";
+        }
+    };
+
+    // Функция для прокрутки наверх
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<!-- Кнопка для прокрутки наверх -->
+<button id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+</body>
+</html>
